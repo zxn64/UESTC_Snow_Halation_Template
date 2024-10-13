@@ -6,7 +6,7 @@ os.chdir("../")
 # 将代码文件内容包装成代码块写入markdown文件中
 def writeCodeFileToMarkDown(md, code):
     # 写入代码块头（C++）
-    md.write('\n```c++\n')
+    md.write('\n```cpp\n')
     
     # 写入代码内容
     for line in code.readlines():

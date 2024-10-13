@@ -1,6 +1,15 @@
-# 几何
+#align(center + horizon, text(size: 32pt, heading(level: 1, outlined: false,  `UESTC_SNOW_HALATION's TEMPLATE`)))
 
-## cjj
+#pagebreak()
+#outline()
+#pagebreak()
+
+#counter(page).update(1)
+#set page(numbering: "1 / 1")
+
+== 几何
+
+=== cjj
 
 ```cpp
 #include <bits/stdc++.h>
