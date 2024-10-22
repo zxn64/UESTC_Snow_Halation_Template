@@ -1,3 +1,7 @@
+/*
+	求树上邻域权值和，单点修改
+*/
+
 #include<stdio.h>
 #include<vector>
 using namespace std;
