@@ -10,7 +10,7 @@ def writeCodeFileToMarkDown(md, code):
     
     # 写入代码内容
     for line in code.readlines():
-        md.write(line)
+        md.write(line.expandtabs(tabsize=4))
     
     # 写入代码块尾
     md.write('```\n')
@@ -29,6 +29,8 @@ def genSingleKindMarkdownFile(name):
             raise Exception(f"具有预期之外的文件类型: {path}/{item.name}")
         
         # 写入模板名作为二级目录
+        if not item.name.endswith(".cpp"):
+            continue
         md.write(f'\n## {item.name}'.removesuffix(".cpp") + '\n')
         
         # 打开代码文件

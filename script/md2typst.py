@@ -8,6 +8,17 @@ typ = open('typst/Template.typ', 'w')
 header = \
 '''#align(center + horizon, text(size: 32pt, heading(level: 1, outlined: false,  `UESTC_SNOW_HALATION's TEMPLATE`)))
 
+#set heading(numbering: (..args) => {
+  let nums = args.pos()
+  let level = nums.len() - 1
+  let i = 0
+  let num = while i < level {
+    i = i + 1
+    [#nums.at(i).]
+  }
+  [#h((level - 1) * 2em)#num]
+})
+
 #pagebreak()
 #outline()
 #pagebreak()
